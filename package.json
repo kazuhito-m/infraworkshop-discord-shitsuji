@@ -1,0 +1,62 @@
+{
+  "name": "infraworkshop-discord-shitsuji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack",
+    "build_run": "webpack && node dist/bundle.js -s ./config/settings.json",
+    "run_only": "node dist/bundle.js -s ./config/settings.json -a ./config/aliases.json",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazuhito-m/infraworkshop-discord-shitsuji.git"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "sonarqube",
+    "gitlab",
+    "webpack"
+  ],
+  "author": "kazuhito_m",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kazuhito-m/infraworkshop-discord-shitsuji/issues"
+  },
+  "homepage": "https://github.com/kazuhito-m/infraworkshop-discord-shitsuji#readme",
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.0",
+    "jest": "^23.1.0",
+    "jest-cli": "^23.1.0",
+    "source-map-support": "^0.5.6",
+    "ts-jest": "^22.4.6",
+    "ts-loader": "^4.3.0",
+    "typescript": "^2.9.1",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "commander": "^2.15.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/src/test/ts/**/*.ts"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/main/ts/**/*.ts"
+    ]
+  }
+}
